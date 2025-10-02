@@ -1,0 +1,29 @@
+/* Hide the default cursor for the entire body */
+body {
+  cursor: none;
+  background-color: #121212; /* A dark background helps the effect stand out */
+  color: white; /* Ensures your text is visible */
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevents scrollbars */
+  margin: 0;
+}
+
+/* Position your content above the cursor canvas */
+.homepage {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1; /* Ensures your content is on top */
+}
+
+/* Ensure the canvas element itself is correctly positioned */
+#fluid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Keeps the canvas behind your content */
+}
