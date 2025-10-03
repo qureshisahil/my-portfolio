@@ -1,14 +1,14 @@
-/* Hide the default cursor for the entire body */
+/* Update the body style to allow scrolling */
 body {
   cursor: none;
   background-color: #121212;
   color: white;
   font-family: Arial, sans-serif;
-  overflow: hidden;
   margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Position your content above the canvas */
+/* Remove height constraint from homepage to allow it to be part of the scrollable content */
 .homepage {
   position: relative;
   height: 100vh;
@@ -17,6 +17,33 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+/* New section styling for the about page */
+.section {
+  min-height: 100vh; /* Make sure each section takes up at least the full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+.about-section {
+  position: relative;
+  z-index: 10;
+}
+
+.about-glass {
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.about-text-container {
+  max-width: 800px;
+  text-align: left;
+  padding: 1rem;
+  z-index: 10;
 }
 
 /* New container for the centered content */
